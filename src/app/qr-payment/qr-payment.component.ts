@@ -70,7 +70,7 @@ export class QrPaymentComponent implements OnInit {
       (data:any) => {   
       this.cbResult =  data.msg;
       this.router.navigate(['cbresult']);
-      console.log("success: ", data); },
+      console.log("success: ", data.transStatus); },
        error => {
         this.router.navigate(['fail']);
          console.warn("error: " , error);
