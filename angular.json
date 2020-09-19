@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.styl"
             ],
             "scripts": []
@@ -67,7 +68,8 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "wipo:build"
-          },
+          },  
+
           "configurations": {
             "production": {
               "browserTarget": "wipo:build:production"
@@ -120,9 +122,13 @@
             "production": {
               "devServerTarget": "wipo:serve:production"
             }
-          }
-        }
+          }        
+       }
       }
-    }},
-  "defaultProject": "wipo"
+    }
+  },
+  "defaultProject": "wipo",
+  "cli": {
+    "analytics": "d2a7b3df-8928-45e7-b77d-9ac520603007"
+  }
 }
