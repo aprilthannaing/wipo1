@@ -7,52 +7,73 @@ import { AppComponent } from './app.component';
 import { from } from 'rxjs';
 import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { PaymentComponent } from './payment/payment.component';
+import { MPUPaymentComponent } from './mpu-payment/mpu-payment.component';
 import { HttpClient, HttpHeaders, HttpClientModule} from '@angular/common/http';
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { SuccessPageComponent } from './success-page/success-page.component';
 import { FailPageComponent } from './fail-page/fail-page.component';
 import { HeaderComponent } from './header/header.component';
-import { CBPayComponent } from './cb-pay/cb-pay.component';
+import { ConfirmComponent } from './confirm/confirm.component';
 import { QrPaymentComponent } from './qr-payment/qr-payment.component';
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
-import { CBResultComponent } from './cbresult/cbresult.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { VisaMasterComponent } from './visa-master/visa-master.component';
+import { RpIntercomService } from './framework/rp-intercom.service';
+import { MpsgPaymentComponent } from './mpsg-payment/mpsg-payment.component';
+import { QrstatusComponent } from './qrstatus/qrstatus.component';
+import {MatButtonModule} from '@angular/material/button';
+import { MatSliderModule } from '@angular/material/slider';
+import { SaveMasterInfoComponent } from './save-master-info/save-master-info.component';
+import { FrontEndRedirectComponent } from './front-end-redirect/front-end-redirect.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'payment', component: PaymentComponent },
+  { path: '', component: FailPageComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'home/:id', component: HomeComponent },
+  { path: 'mpu-payment', component: MPUPaymentComponent },
   { path: 'success', component: SuccessPageComponent },
   { path: 'fail', component: FailPageComponent },
-  { path: 'cbPay', component: CBPayComponent },
+  { path: 'confirm', component: ConfirmComponent },
+  {path: 'confirm/:id', component : ConfirmComponent}, 
   { path: 'qrcode', component: QrPaymentComponent },
-  { path: 'cbresult', component: CBResultComponent }
-
+  { path: 'visa', component: VisaMasterComponent },
+  { path: 'mpsg', component: MpsgPaymentComponent },
+  { path: 'checkStatus', component: QrstatusComponent },
+  { path: 'saveMaster', component: SaveMasterInfoComponent },
+  { path: 'mpu/frontEndRedirect', component: FrontEndRedirectComponent },
 ];
+
 
 @NgModule({
   declarations: [
-    CBResultComponent,
     AppComponent,
     HomeComponent,
-    LoginComponent,
-    PaymentComponent,
+    MPUPaymentComponent,
     SuccessPageComponent,
     FailPageComponent,
     HeaderComponent,
-    CBPayComponent, 
-    QrPaymentComponent, CBResultComponent,
+    ConfirmComponent, 
+    QrPaymentComponent, 
+    VisaMasterComponent, 
+    QrstatusComponent, 
+    SaveMasterInfoComponent, 
+    FrontEndRedirectComponent,
   ],
   
-  imports: [
+  imports: [ 
+    MatSliderModule,
+    MatButtonModule,  
     NgxQRCodeModule,
     HttpClientModule,    
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(routes,{useHash: true})
+    RouterModule.forRoot(routes,{useHash: false}),
+    FontAwesomeModule,
   ],
-  providers: [],
+  providers: [ 
+    RpIntercomService
+  ],
   bootstrap: [AppComponent]
 })
 

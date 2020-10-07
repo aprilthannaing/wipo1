@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CBPayComponent } from './cb-pay.component';
+import { SaveMasterInfoComponent } from './save-master-info.component';
 
-describe('CBPayComponent', () => {
-  let component: CBPayComponent;
-  let fixture: ComponentFixture<CBPayComponent>;
+describe('SaveMasterInfoComponent', () => {
+  let component: SaveMasterInfoComponent;
+  let fixture: ComponentFixture<SaveMasterInfoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CBPayComponent ]
+      declarations: [ SaveMasterInfoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CBPayComponent);
+    fixture = TestBed.createComponent(SaveMasterInfoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

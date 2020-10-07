@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CBResultComponent } from './cbresult.component';
+import { QrstatusComponent } from './qrstatus.component';
 
-describe('CBResultComponent', () => {
-  let component: CBResultComponent;
-  let fixture: ComponentFixture<CBResultComponent>;
+describe('QrstatusComponent', () => {
+  let component: QrstatusComponent;
+  let fixture: ComponentFixture<QrstatusComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CBResultComponent ]
+      declarations: [ QrstatusComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CBResultComponent);
+    fixture = TestBed.createComponent(QrstatusComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

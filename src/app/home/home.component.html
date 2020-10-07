@@ -4,7 +4,7 @@
         <div class="navbar-header" style="width:100%;height: 400px;">
             <div class="row">
                    <div class="col-md-1">
-                       <img src="/assets/img/images.png" width="120" height="110">
+                       <img src="assets/img/images.png" width="120" height="110">
                    </div>
                     <div class="col-md-7" style="margin-top: 22px;margin-left: 35px;" >                                    
                              <span style="font-size: x-large;font-family:sans-serif;color:lavender;">DEPARTMENT OF INTELLECTUAL PROPERTY</span>
@@ -45,15 +45,18 @@
 
            <h3 style="margin-left: 120px;margin-top: 100px;">ပေးချေလိုသည့် Payment အမျိုးအစားကို ရွေးချယ်ပါ။</h3>
            <div class="row" style="margin-left: 110px;margin-top: 40px;" >
-              <img src="/assets/img/visa.png" style="width:230px;height:160px;margin-right: 50px;" (click)="success()" class="hover-shadow cursor">
-              <img src="/assets/img/master_logo.png" style="width:230px;height:160px;margin-right: 50px;" (click)="fail()" class="hover-shadow cursor">
-              <img src="/assets/img/mpu.jpg" style="width:230px;height:160px;margin-right: 50px;" (click)="payment()" class="hover-shadow cursor">
-              <img src="/assets/img/cbpay.jpg" style="width:230px;height:160px;margin-right: 50px;" (click)="cbPay()" class="hover-shadow cursor">
+              <img src="assets/img/visa.png" style="width:230px;height:160px;margin-right: 50px;" (click)="visa()" class="hover-shadow cursor">
+              <img src="assets/img/master_logo.png" style="width:230px;height:160px;margin-right: 50px;" (click)="visa()" class="hover-shadow cursor">
+              <img src="assets/img/mpu.jpg" style="width:230px;height:160px;margin-right: 50px;" (click)="payment()" class="hover-shadow cursor">
+              <img src="assets/img/cbpay.jpg" style="width:230px;height:160px;margin-right: 50px;" (click)="cbPay()" class="hover-shadow cursor">
 
             </div>
+            <button style="margin-left: 20px;margin-top: 30px;width: 100px;" class="btn btn-primary" (click)="saveMaster()">Save Master</button>
         </div>
     </div>
 </nav>
+
+
 
 
 

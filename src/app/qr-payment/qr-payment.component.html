@@ -1,33 +1,24 @@
 
-  
-<div style="width:100%;height:100px;background-color:#1fb0fb;margin-bottom: 100px;">
-  <div class="row">
-    <div class="col-md-1">
-        <img src="/assets/img/images.png" width="120" height="110">
-    </div>
-     <div class="col-md-7" style="margin-top: 22px;margin-left: 35px;" >                                    
-              <span style="font-size: x-large;font-family:sans-serif;color:lavender;">DEPARTMENT OF INTELLECTUAL PROPERTY</span>
-              <br>
-             <span style="font-family:cursive;color:lavender;"> MINISTRY OF COMMERCE </span>
-     </div>
-</div>
-</div>
+<app-header></app-header>
 
-<div style="width:100%;margin-left: 600px;">
-  <h4>Please scan here to pay via CB Pay</h4>
-
-     <div style="width:250px;height:250px;margin-left: 13px;margin-top: 30px;">
+<div>
+  <div style="width:100%;margin-left: 600px;">  
+   <h4>Please scan here to pay via CB Pay</h4>
+     <div style="width:250px;height:280px;margin-left: 13px;margin-top: 30px;">
          <ngx-qrcode
         [elementType]="elementType"
         [errorCorrectionLevel]="correctionLevel"
-        [value]="resObj.merDqrCode"
+        [value]="merDqrCode"
          cssClass="bshadow"></ngx-qrcode>
      </div>
 
-     <h4 style="margin-top: 30px;" (click)="checkStatus()">ငွေပေးချေမှုပြီးမှသာ ဤနေရာကိုနှိပ်ပါ။</h4>
+     <h4 style="margin-top: 40px;" (click)="checkStatus()">ငွေပေးချေမှုပြီးမှသာ ဤနေရာကိုနှိပ်ပါ။</h4>
      <h4 style="margin-top: 30px;" (click)="checkStatus()">Click here after your payment is successful.</h4>
      <button style="margin-left: 20px;margin-top: 30px;width: 80px;" class="btn btn-primary" (click)="cancel()">Cancel</button>
+ </div>
 </div>
+
+
 
 
 

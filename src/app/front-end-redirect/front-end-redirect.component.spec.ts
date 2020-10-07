@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoginComponent } from './login.component';
+import { FrontEndRedirectComponent } from './front-end-redirect.component';
 
-describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
+describe('FrontEndRedirectComponent', () => {
+  let component: FrontEndRedirectComponent;
+  let fixture: ComponentFixture<FrontEndRedirectComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
+      declarations: [ FrontEndRedirectComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
+    fixture = TestBed.createComponent(FrontEndRedirectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
